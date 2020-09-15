@@ -5,7 +5,7 @@ on:
     branches:
     - master
   schedule:
-    - cron: "0 21 * * 3"
+    - cron: "0 3 * * 7"
   workflow_dispatch:
   
 jobs:
@@ -52,8 +52,8 @@ jobs:
         ---
         applications:
         - name: v2ws
-          memory: 128M
-          disk_quota: 128M
+          memory: 256M
+          disk_quota: 256M
           random-route: true
           command: ./v2ray
           buildpacks:
